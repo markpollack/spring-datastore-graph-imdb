@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/3953/examples/imdb/trunk/src/main/model
+END
+imdb.parser.data.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/2336/examples/imdb/trunk/src/main/model/imdb.parser.data.ucls
+END
+imdb.domain.interface.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/2336/examples/imdb/trunk/src/main/model/imdb.domain.interface.ucls
+END
+imdb.domain.service.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/3953/examples/imdb/trunk/src/main/model/imdb.domain.service.ucls
+END
+imdb.domain.impl.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/3953/examples/imdb/trunk/src/main/model/imdb.domain.impl.ucls
+END
+imdb.domain.service.search.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/3953/examples/imdb/trunk/src/main/model/imdb.domain.service.search.ucls
+END
+imdb.parser.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/2336/examples/imdb/trunk/src/main/model/imdb.parser.ucls
+END
+imdb.web.find.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/2336/examples/imdb/trunk/src/main/model/imdb.web.find.ucls
+END
+imdb.web.setup.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/3619/examples/imdb/trunk/src/main/model/imdb.web.setup.ucls
+END
+imdb.util.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/2336/examples/imdb/trunk/src/main/model/imdb.util.ucls
+END
+imdb.domain.interface.simple.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/2336/examples/imdb/trunk/src/main/model/imdb.domain.interface.simple.ucls
+END
+imdb.packages.ucls
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/3953/examples/imdb/trunk/src/main/model/imdb.packages.ucls
+END

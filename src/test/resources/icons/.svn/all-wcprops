@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/2353/examples/imdb/trunk/src/test/resources/icons
+END
+ACTS_IN.INCOMING.png
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/2353/examples/imdb/trunk/src/test/resources/icons/ACTS_IN.INCOMING.png
+END
+PART_OF_NAME.OUTGOING.png
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/2353/examples/imdb/trunk/src/test/resources/icons/PART_OF_NAME.OUTGOING.png
+END
+IMDB.OUTGOING.png
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/2353/examples/imdb/trunk/src/test/resources/icons/IMDB.OUTGOING.png
+END
+PART_OF_TITLE.OUTGOING.png
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/2353/examples/imdb/trunk/src/test/resources/icons/PART_OF_TITLE.OUTGOING.png
+END
+ACTS_IN.OUTGOING.png
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/2353/examples/imdb/trunk/src/test/resources/icons/ACTS_IN.OUTGOING.png
+END

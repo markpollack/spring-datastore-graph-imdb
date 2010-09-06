@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/3619/examples/imdb/trunk/src/main/webapp/WEB-INF
+END
+imdb-app-servlet.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/3619/examples/imdb/trunk/src/main/webapp/WEB-INF/imdb-app-servlet.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/WEB-INF/web.xml
+END

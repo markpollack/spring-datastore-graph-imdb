@@ -1,0 +1,40 @@
+10
+
+dir
+5132
+https://svn.neo4j.org/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb
+https://svn.neo4j.org
+
+
+
+2010-01-25T14:09:48.344272Z
+3619
+mattias
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0b971d98-bb2f-0410-8247-b05b2b5feb2a
+
+domain
+dir
+
+parser
+dir
+
+util
+dir
+
+web
+dir
+

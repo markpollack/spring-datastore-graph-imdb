@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/3619/examples/imdb/trunk/src/main/webapp/jsp
+END
+menu.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/menu.jsp
+END
+actor.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/actor.jsp
+END
+movie-list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/movie-list.jsp
+END
+movie.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/movie.jsp
+END
+setup.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/3619/examples/imdb/trunk/src/main/webapp/jsp/setup.jsp
+END
+actor-list.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/actor-list.jsp
+END
+head.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/head.jsp
+END
+setup-message.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/setup-message.jsp
+END
+include.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/2331/examples/imdb/trunk/src/main/webapp/jsp/include.jsp
+END

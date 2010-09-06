@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/2559/examples/imdb/trunk/src/main/resources/data
+END
+actors.list.gz
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/2559/examples/imdb/trunk/src/main/resources/data/actors.list.gz
+END
+actresses.list.gz
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/2559/examples/imdb/trunk/src/main/resources/data/actresses.list.gz
+END
+movies.list.gz
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/2559/examples/imdb/trunk/src/main/resources/data/movies.list.gz
+END

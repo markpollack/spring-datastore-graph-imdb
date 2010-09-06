@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/2560/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/parser
+END
+ImdbReaderImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/2560/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/parser/ImdbReaderImpl.java
+END
+ActorData.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/2331/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/parser/ActorData.java
+END
+ImdbParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/2560/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/parser/ImdbParser.java
+END
+MovieData.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/2331/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/parser/MovieData.java
+END
+RoleData.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/2331/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/parser/RoleData.java
+END
+ImdbReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/2331/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/parser/ImdbReader.java
+END

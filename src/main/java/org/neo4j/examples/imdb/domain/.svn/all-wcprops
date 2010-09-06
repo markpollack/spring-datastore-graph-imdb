@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/3619/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain
+END
+Movie.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/2331/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/Movie.java
+END
+MovieImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/3502/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/MovieImpl.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/2331/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/Role.java
+END
+RoleImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3503/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/RoleImpl.java
+END
+ImdbSearchEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/3502/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/ImdbSearchEngine.java
+END
+RelTypes.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/3502/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/RelTypes.java
+END
+Actor.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/2331/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/Actor.java
+END
+ImdbSearchEngineImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/3502/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/ImdbSearchEngineImpl.java
+END
+ImdbSearchRelTypes.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/3502/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/ImdbSearchRelTypes.java
+END
+ActorImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/3502/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/ActorImpl.java
+END
+ImdbService.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/3619/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/ImdbService.java
+END
+ImdbServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/3502/examples/imdb/trunk/src/main/java/org/neo4j/examples/imdb/domain/ImdbServiceImpl.java
+END
