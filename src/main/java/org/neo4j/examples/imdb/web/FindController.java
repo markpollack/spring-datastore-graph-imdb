@@ -19,12 +19,6 @@ public class FindController extends SimpleFormController
         this.delegate = delegate;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see
-     * org.springframework.web.servlet.mvc.SimpleFormController#onSubmit(java
-     * .lang.Object)
-     */
     @Override
     protected ModelAndView onSubmit( final Object command ) throws ServletException
     {
@@ -33,12 +27,6 @@ public class FindController extends SimpleFormController
         return new ModelAndView( getSuccessView(), "model", model );
     }
 
-    /*
-     * (non-Javadoc)
-     * @see
-     * org.springframework.web.servlet.mvc.AbstractFormController#isFormSubmission
-     * (javax.servlet.http.HttpServletRequest)
-     */
     @Override
     protected boolean isFormSubmission( final HttpServletRequest request )
     {

@@ -6,8 +6,7 @@ import javax.servlet.ServletException;
 
 public interface FindControllerDelegate
 {
-    void getModel( Object command, Map<String,Object> model )
-        throws ServletException;
+    void getModel( Object command, Map<String,Object> model ) throws ServletException;
 
     String getFieldName();
 }

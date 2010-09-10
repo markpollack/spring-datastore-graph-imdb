@@ -25,18 +25,13 @@ public class ImdbSetupControllerDelegate implements SetupControllerDelegate
         StringBuffer message = new StringBuffer( 200 );
         try
         {
-            message.append(
-                parser.parseMovies( IMDB_DATADIR + "movies.list.gz" ) ).append(
-                '\n' );
-            message.append(
-                parser.parseActors( IMDB_DATADIR + "actors.list.gz",
-                    IMDB_DATADIR + "actresses.list.gz" ) ).append( '\n' );
+            message.append(parser.parseMovies( IMDB_DATADIR + "movies.list.gz" ) ).append('\n');
+            message.append(parser.parseActors( IMDB_DATADIR + "actors.list.gz", IMDB_DATADIR + "actresses.list.gz" ) ).append( '\n' );
             imdbService.setupReferenceRelationship();
         }
         catch ( IOException e )
         {
-            message.append( "Something went wrong during the setup process:\n" )
-                .append( e.getMessage() );
+            message.append( "Something went wrong during the setup process:\n" ).append(e.getMessage() );
         }
         model.put( "setupMessage", message.toString() );
     }

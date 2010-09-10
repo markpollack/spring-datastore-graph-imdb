@@ -18,12 +18,6 @@ public class SetupController extends SimpleFormController
         this.delegate = delegate;
     }
 
-    /*
-     * (non-Javadoc)
-     * @see
-     * org.springframework.web.servlet.mvc.SimpleFormController#onSubmit(java
-     * .lang.Object)
-     */
     @Override
     protected ModelAndView onSubmit( final Object command ) throws ServletException
     {
