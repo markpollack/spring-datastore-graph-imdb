@@ -1,32 +1,38 @@
 package org.neo4j.examples.imdb.domain;
 
-public interface Actor
-{
-    /**
-     * Returns this actors imdb-encoded name.
-     * @return actor name
-     */
-    String getName();
+import org.springframework.datastore.graph.api.GraphEntity;
+import org.springframework.datastore.graph.api.GraphEntityProperty;
+import org.springframework.datastore.graph.api.GraphEntityRelationship;
 
-    /**
-     * Sets the actors name.
-     * @param name
-     *            name of actor
-     */
-    void setName( String name );
+import java.util.Set;
 
-    /**
-     * Returns all movies this actor acted in.
-     * @return all movies
-     */
-    Iterable<Movie> getMovies();
+@GraphEntity
+public class Actor {
+    @GraphEntityProperty(index = true)
+    private String name;
 
-    /**
-     * Returns the specific role an actor had in a movie or null if actor didn't
-     * have a role in the movie.
-     * @param inMovie
-     *            the movie to get role for
-     * @return the role or null
-     */
-    Role getRole( Movie inMovie );
+    @GraphEntityRelationship(type="ACTS_IN",elementClass = Movie.class)
+    private Set<Movie> movies;
+    static final String NAME_INDEX = "name";
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Iterable<Movie> getMovies() {
+        return movies;
+    }
+
+    public Role getRole(final Movie inMovie) {
+        return (Role)getRelationshipTo((Movie)inMovie, Role.class, RelTypes.ACTS_IN.name());
+    }
+
+    @Override
+    public String toString() {
+        return "Actor '" + this.getName() + "'";
+    }
 }

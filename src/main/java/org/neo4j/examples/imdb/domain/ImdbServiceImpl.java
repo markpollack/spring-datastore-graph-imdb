@@ -27,23 +27,18 @@ class ImdbServiceImpl implements ImdbService {
     @Autowired
     private ImdbSearchEngine searchEngine;
 
-    private static final String TITLE_INDEX = "title";
-    private static final String NAME_INDEX = "name";
-
     public Actor createActor(final String name) {
-        final ActorImpl actor = new ActorImpl();
+        final Actor actor = new Actor();
         actor.setName(name);
         searchEngine.indexActor(actor);
-        indexService.index(actor.getUnderlyingNode(), NAME_INDEX, name);
         return actor;
     }
 
     public Movie createMovie(final String title, final int year) {
-        final MovieImpl movie = new MovieImpl();
+        final Movie movie = new Movie();
         movie.setTitle(title);
         movie.setYear(year);
         searchEngine.indexMovie(movie);
-        indexService.index(movie.getUnderlyingNode(), TITLE_INDEX, title);
         return movie;
     }
 
@@ -51,18 +46,18 @@ class ImdbServiceImpl implements ImdbService {
                            final String roleName) {
         if (actor == null) throw new IllegalArgumentException("Null actor");
         if (movie == null) throw new IllegalArgumentException("Null movie");
-        Role role = (Role) ((ActorImpl)actor).relateTo((MovieImpl)movie, RoleImpl.class, RelTypes.ACTS_IN.name());
+        Role role = (Role) actor.relateTo(movie, Role.class, RelTypes.ACTS_IN.name());
         role.setName(roleName);
         return role;
     }
 
     public Actor getActor(final String name) {
-        Node actorNode = indexService.getSingleNode(NAME_INDEX, name);
+        Node actorNode = indexService.getSingleNode(Actor.NAME_INDEX, name);
         if (actorNode == null) {
             actorNode = searchEngine.searchActor(name);
         }
         if (actorNode != null) {
-            return graphEntityInstantiator.createEntityFromState(actorNode,ActorImpl.class);
+            return graphEntityInstantiator.createEntityFromState(actorNode, Actor.class);
         }
         return null;
     }
@@ -73,7 +68,7 @@ class ImdbServiceImpl implements ImdbService {
             movieNode = searchEngine.searchMovie(title);
         }
         if (movieNode != null) {
-            return graphEntityInstantiator.createEntityFromState(movieNode,MovieImpl.class);
+            return graphEntityInstantiator.createEntityFromState(movieNode, Movie.class);
         }
         return null;
     }
@@ -81,7 +76,7 @@ class ImdbServiceImpl implements ImdbService {
     public Movie getExactMovie(final String title) {
         Node movieNode = getExactMovieNode(title);
         if (movieNode != null) {
-            return graphEntityInstantiator.createEntityFromState(movieNode,MovieImpl.class);
+            return graphEntityInstantiator.createEntityFromState(movieNode, Movie.class);
         }
         return null;
     }
@@ -89,10 +84,10 @@ class ImdbServiceImpl implements ImdbService {
     private Node getExactMovieNode(final String title) {
         Node movieNode = null;
         try {
-            movieNode = indexService.getSingleNode(TITLE_INDEX, title);
+            movieNode = indexService.getSingleNode(Movie.TITLE_INDEX, title);
         } catch (RuntimeException e) {
             System.out.println("Duplicate index for movie title: " + title);
-            Iterator<Node> movieNodes = indexService.getNodes(TITLE_INDEX,
+            Iterator<Node> movieNodes = indexService.getNodes(Movie.TITLE_INDEX,
                     title).iterator();
             if (movieNodes.hasNext()) {
                 movieNode = movieNodes.next();
@@ -124,7 +119,7 @@ class ImdbServiceImpl implements ImdbService {
             throw new NoSuchElementException(
                     "Unable to find Kevin Bacon actor");
         }
-        final Node actorNode = ((ActorImpl) actor).getUnderlyingNode();
+        final Node actorNode = ((Actor) actor).getUnderlyingNode();
         final List<Node> list = pathFinder.shortestPath(actorNode, baconNode,
                 RelTypes.ACTS_IN);
         return convertNodesToActorsAndMovies(list);
@@ -135,9 +130,9 @@ class ImdbServiceImpl implements ImdbService {
         int mod = 0;
         for (Node node : list) {
             if (mod++ % 2 == 0) {
-                actorAndMovieList.add(graphEntityInstantiator.createEntityFromState(node,ActorImpl.class));
+                actorAndMovieList.add(graphEntityInstantiator.createEntityFromState(node, Actor.class));
             } else {
-                actorAndMovieList.add(graphEntityInstantiator.createEntityFromState(node,MovieImpl.class));
+                actorAndMovieList.add(graphEntityInstantiator.createEntityFromState(node, Movie.class));
             }
         }
         return actorAndMovieList;

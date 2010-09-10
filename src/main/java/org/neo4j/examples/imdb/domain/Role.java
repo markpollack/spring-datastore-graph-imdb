@@ -1,33 +1,36 @@
 package org.neo4j.examples.imdb.domain;
 
-/**
- * A role holds role information of an actor in a specific movie.
- */
-public interface Role
-{
-    /**
-     * Returns the role name. Ex: "Reeves, Keanu" acted in "Matrix, The (1999)"
-     * as "Neo". This method would then return "Neo" as name.
-     * @return name of this role or null if no role found
-     */
-    String getName();
+import org.springframework.datastore.graph.api.GraphRelationship;
+import org.springframework.datastore.graph.api.GraphRelationshipEndNode;
+import org.springframework.datastore.graph.api.GraphRelationshipStartNode;
 
-    /**
-     * Sets the role name.
-     * @param name
-     *            role name
-     */
-    void setName( String name );
+@GraphRelationship
+public class Role {
+    String role;
+    @GraphRelationshipStartNode
+    Actor actor;
+    @GraphRelationshipEndNode
+    Movie movie;
 
-    /**
-     * Returns the movie this role is connected to.
-     * @return movie for this role
-     */
-    Movie getMovie();
+    @Override
 
-    /**
-     * Returns the actor for this role.
-     * @return actor for this role
-     */
-    Actor getActor();
+    public String toString() {
+        return String.format("%s-[%s]->%s", this.getActor(), role, this.getMovie());
+    }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public Movie getMovie() {
+        return movie;
+    }
+
+    public String getName() {
+        return role;
+    }
+
+    public void setName(String name) {
+        this.role = name;
+    }
 }

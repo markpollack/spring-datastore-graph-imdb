@@ -1,36 +1,44 @@
 package org.neo4j.examples.imdb.domain;
 
-public interface Movie
-{
-    /**
-     * Returns the title of this movie.
-     * @return title of this movie.
-     */
-    String getTitle();
+import org.springframework.datastore.graph.api.Direction;
+import org.springframework.datastore.graph.api.GraphEntity;
+import org.springframework.datastore.graph.api.GraphEntityProperty;
+import org.springframework.datastore.graph.api.GraphEntityRelationship;
 
-    /**
-     * Set the title of this movie.
-     * @param title
-     *            title of movie
-     */
-    void setTitle( String title );
+import java.util.Set;
 
-    /**
-     * Returns the year this movie was released.
-     * @return the year this movie was released
-     */
-    int getYear();
+@GraphEntity
+public class Movie {
+    @GraphEntityProperty(index = true)
+    String title;
+    int year;
 
-    /**
-     * Set the year of this movie.
-     * @param year
-     *            year of movie
-     */
-    void setYear( int year );
+    @GraphEntityRelationship(type="ACTS_IN",elementClass = Actor.class, direction = Direction.INCOMING)
+    Set<Actor> actors;
+    static final String TITLE_INDEX = "title";
 
-    /**
-     * Returns all actors that acted in this movie.
-     * @return actors that acted in this movie
-     */
-    Iterable<Actor> getActors();
+    public Iterable<Actor> getActors() {
+        return actors;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s (%d)", getTitle(), getYear());
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
 }

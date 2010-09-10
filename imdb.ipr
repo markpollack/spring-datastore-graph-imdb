@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AjcSettings">
-    <option name="ajcPath" value="$MAVEN_REPOSITORY$/org/aspectj/aspectjtools/1.6.10.BUILD-SNAPSHOT/aspectjtools-1.6.10.BUILD-SNAPSHOT.jar" />
-    <option name="cmdLineParams" value="-Xmx256m -target 1.6" />
-  </component>
   <component name="ArtifactManager">
     <artifact type="war" name="imdb:war">
       <output-path>$PROJECT_DIR$/target</output-path>
@@ -50,7 +46,7 @@
             <element id="library" level="project" name="Maven: org.springframework.datastore:datastore-cross-store:1.0.0.CI-SNAPSHOT" />
             <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:1.8.0.10" />
             <element id="library" level="project" name="Maven: javax.validation:validation-api:1.0.0.GA" />
-            <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:4.1.0.Final" />
+            <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:4.0.2.GA" />
             <element id="library" level="project" name="Maven: org.apache.tiles:tiles-core:2.2.1" />
             <element id="library" level="project" name="Maven: org.apache.tiles:tiles-api:2.2.1" />
             <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.0" />
@@ -69,8 +65,11 @@
       </root>
     </artifact>
   </component>
+  <component name="BuildJarProjectSettings">
+    <option name="BUILD_JARS_ON_MAKE" value="false" />
+  </component>
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="ajc" />
+    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
@@ -88,6 +87,9 @@
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
     <annotationProcessing enabled="false" useClasspath="true" />
+  </component>
+  <component name="CopyrightManager" default="">
+    <module2copyright />
   </component>
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
@@ -130,6 +132,13 @@
   </component>
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="EclipseCompilerSettings">
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="true" />
+    <option name="DEPRECATION" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+    <option name="MAXIMUM_HEAP_SIZE" value="128" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="FacetAutodetectingManager">
@@ -207,6 +216,7 @@
         <inspection_tool class="IncrementDecrementUsedAsExpression" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="InstanceofChain" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="InstanceofThis" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="JDBCResource" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="LocalCanBeFinal" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="REPORT_VARIABLES" value="true" />
           <option name="REPORT_PARAMETERS" value="true" />
@@ -220,13 +230,9 @@
         </inspection_tool>
         <inspection_tool class="MethodOnlyUsedFromInnerClass" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="ignoreMethodsAccessedFromAnonymousClass" value="false" />
-          <option name="ignoreStaticMethodsFromNonStaticInnerClass" value="false" />
-          <option name="onlyReportStaticMethods" value="false" />
         </inspection_tool>
         <inspection_tool class="MissingDeprecatedAnnotation" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="MissingOverrideAnnotation" enabled="true" level="WARNING" enabled_by_default="true">
-          <option name="ignoreObjectMethods" value="true" />
-        </inspection_tool>
+        <inspection_tool class="MissingOverrideAnnotation" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="NestedAssignment" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="ObsoleteCollection" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="ignoreRequiredObsoleteCollectionTypes" value="false" />
@@ -234,6 +240,7 @@
         <inspection_tool class="OverlyStrongTypeCast" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="ignoreInMatchingInstanceof" value="false" />
         </inspection_tool>
+        <inspection_tool class="PublicMethodNotExposedInInterface" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="Singleton" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="StaticMethodOnlyUsedInOneClass" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="StaticNonFinalField" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -244,6 +251,11 @@
         <inspection_tool class="TooBroadScope" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="m_allowConstructorAsInitializer" value="false" />
           <option name="m_onlyLookAtBlocks" value="false" />
+        </inspection_tool>
+        <inspection_tool class="TypeMayBeWeakened" enabled="true" level="WARNING" enabled_by_default="true">
+          <option name="useRighthandTypeAsWeakestTypeInAssignments" value="true" />
+          <option name="useParameterizedTypeForCollectionMethods" value="true" />
+          <option name="doNotWeakenToJavaLangObject" value="true" />
         </inspection_tool>
         <inspection_tool class="UtilityClassWithPublicConstructor" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="UtilityClassWithoutPrivateConstructor" enabled="true" level="WARNING" enabled_by_default="true">
@@ -256,7 +268,7 @@
     <version value="1.0" />
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.5" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-target 1.6" />
   </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
@@ -275,6 +287,14 @@
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
   </component>
+  <component name="JikesSettings">
+    <option name="JIKES_PATH" value="" />
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="DEPRECATION" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="false" />
+    <option name="IS_EMACS_ERRORS_MODE" value="true" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -285,6 +305,9 @@
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
+  </component>
+  <component name="ProjectKey">
+    <option name="state" value="project://default" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="true" id="Add" />
@@ -306,6 +329,13 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+  <component name="RmicSettings">
+    <option name="IS_EANABLED" value="false" />
+    <option name="DEBUGGING_INFO" value="true" />
+    <option name="GENERATE_NO_WARNINGS" value="false" />
+    <option name="GENERATE_IIOP_STUBS" value="false" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -339,7 +369,7 @@
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -359,7 +389,7 @@
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" />
+      <extension name="coverage" enabled="false" merge="false" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -376,7 +406,6 @@
         <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
-      <patterns />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -391,9 +420,6 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SvnBranchConfigurationManager">
-    <option name="mySupportsUserInfoFilter" value="true" />
-  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -410,53 +436,13 @@
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="svn" />
+    <mapping directory="" vcs="" />
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
   </component>
   <component name="libraryTable">
-    <library name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: aopalliance:aopalliance:1.0">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: javax.servlet:servlet-api:2.5">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: javax.servlet:jstl:1.2">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: junit:junit:4.8.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.8.1/junit-4.8.1.jar!/" />
@@ -534,6 +520,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjweaver/1.6.10.BUILD-SNAPSHOT/aspectjweaver-1.6.10.BUILD-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: javax.servlet:servlet-api:2.5">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: net.sf.flexjson:flexjson:2.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/net/sf/flexjson/flexjson/2.0/flexjson-2.0.jar!/" />
@@ -543,17 +540,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/net/sf/flexjson/flexjson/2.0/flexjson-2.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.springframework.roo:org.springframework.roo.annotations:1.1.0.M4">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.annotations/1.1.0.M4/org.springframework.roo.annotations-1.1.0.M4.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.annotations/1.1.0.M4/org.springframework.roo.annotations-1.1.0.M4-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/roo/org.springframework.roo.annotations/1.1.0.M4/org.springframework.roo.annotations-1.1.0.M4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework:spring-core:3.0.4.RELEASE">
@@ -609,6 +595,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/3.0.4.RELEASE/spring-aop-3.0.4.RELEASE-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: aopalliance:aopalliance:1.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.springframework:spring-beans:3.0.4.RELEASE">
@@ -697,7 +694,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/datastore/datastore-graph/1.0.0.CI-SNAPSHOT/datastore-graph-1.0.0.CI-SNAPSHOT-sources.jar!/" />
-        <root url="file://$PROJECT_DIR$/../datastore-graph/src/main/java" />
       </SOURCES>
     </library>
     <library name="Maven: org.neo4j:neo4j-kernel:1.1">
@@ -709,6 +705,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/neo4j/neo4j-kernel/1.1/neo4j-kernel-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.neo4j:neo4j-utils:1.1">
@@ -775,7 +782,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/datastore/datastore-cross-store/1.0.0.CI-SNAPSHOT/datastore-cross-store-1.0.0.CI-SNAPSHOT-sources.jar!/" />
-        <root url="file://$PROJECT_DIR$/../datastore-cross-store/src/main/java" />
       </SOURCES>
     </library>
     <library name="Maven: org.hsqldb:hsqldb:1.8.0.10">
@@ -800,15 +806,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hibernate:hibernate-validator:4.1.0.Final">
+    <library name="Maven: org.hibernate:hibernate-validator:4.0.2.GA">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.1.0.Final/hibernate-validator-4.1.0.Final.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.0.2.GA/hibernate-validator-4.0.2.GA.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.1.0.Final/hibernate-validator-4.1.0.Final-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.0.2.GA/hibernate-validator-4.0.2.GA-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.1.0.Final/hibernate-validator-4.1.0.Final-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/4.0.2.GA/hibernate-validator-4.0.2.GA-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.tiles:tiles-core:2.2.1">
@@ -932,6 +938,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: javax.servlet:jstl:1.2">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: javax.el:el-api:1.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/el/el-api/1.0/el-api-1.0.jar!/" />
@@ -963,6 +980,13 @@
             <SplitterProportionsDataImpl />
           </splitter-proportions>
           <settings />
+        </UIState>
+      </state>
+      <state key="Copyright.UI">
+        <UIState>
+          <splitter-proportions>
+            <SplitterProportionsDataImpl />
+          </splitter-proportions>
         </UIState>
       </state>
       <state key="ProjectJDKs.UI">
