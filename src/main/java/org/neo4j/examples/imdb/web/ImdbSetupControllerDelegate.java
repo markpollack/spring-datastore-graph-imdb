@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class ImdbSetupControllerDelegate implements SetupControllerDelegate
 {
-    private static final String IMDB_DATADIR = "target/classes/data/";
+    private static final String IMDB_DATADIR = "data/";
     @Autowired
     private ImdbReader imdbReader;
     @Autowired
@@ -21,6 +21,7 @@ public class ImdbSetupControllerDelegate implements SetupControllerDelegate
     public void getModel( final Object command, final Map<String,Object> model )
         throws ServletException
     {
+    	
         final ImdbParser parser = new ImdbParser( imdbReader );
         StringBuffer message = new StringBuffer( 200 );
         try

@@ -12,6 +12,9 @@ import java.util.List;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipInputStream;
 
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
 /**
  * A <code>ImdbParser</code> can parse the movie and actor/actress lists from
  * the imdb text data (http://www.imdb.com/interfaces). It uses an
@@ -239,7 +242,7 @@ public class ImdbParser
         if ( file.endsWith( ".gz" ) )
         {
             fileReader = new BufferedReader( new InputStreamReader(
-                new GZIPInputStream( new FileInputStream( file ) ) ) );
+            	new GZIPInputStream( new ClassPathResource(file).getInputStream() ) ) );
         }
         else if ( file.endsWith( ".zip" ) )
         {
