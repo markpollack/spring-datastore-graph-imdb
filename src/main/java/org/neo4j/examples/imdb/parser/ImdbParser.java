@@ -1,7 +1,6 @@
 package org.neo4j.examples.imdb.parser;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,7 +12,6 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.ZipInputStream;
 
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 
 /**
  * A <code>ImdbParser</code> can parse the movie and actor/actress lists from
@@ -247,7 +245,7 @@ public class ImdbParser
         else if ( file.endsWith( ".zip" ) )
         {
             fileReader = new BufferedReader( new InputStreamReader(
-                new ZipInputStream( new FileInputStream( file ) ) ) );
+                new ZipInputStream( new ClassPathResource(file).getInputStream() ) ) );
         }
         else
         {
